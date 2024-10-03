@@ -21,4 +21,13 @@ return {
   		},
   	},
   },
+
+  -- this handles copy and paste to SYSTEM CLIPBOARD! YAY!
+  {
+    'ojroques/nvim-osc52'
+  },
+
+  -- Get gitsigns to print git blame in line by default
+  require('gitsigns').setup({current_line_blame = true})
+  -- quick and dirty; idk if this is the best place to add this requirement...
 }

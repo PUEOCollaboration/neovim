@@ -27,5 +27,5 @@
 
 -- Mason doesn't want to install clangd, 
 -- so I use dnf to install it as a quick and dirty fix.
-require'lspconfig'.clangd.setup{ cmd = { "$(which clangd)" } }
+require'lspconfig'.clangd.setup{ cmd = { "/usr/bin/clangd" } }
 
