@@ -23,3 +23,8 @@ map('v', '<leader>c', require('osc52').copy_visual)
 
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+-- mapping (command key + j) on mac to toggle horizontal terminal
+map({ "n", "t" }, "<D-j>", function()
+  require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
+end, { desc = "terminal toggle horizontal term" })
