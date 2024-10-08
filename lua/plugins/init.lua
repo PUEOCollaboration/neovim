@@ -29,7 +29,7 @@ return {
 
   -- this handles ctrl-(hjkl) movement between neovim and other kitty panes
   -- kitty is a terminal emulator, highly recommend
-  {'knubie/vim-kitty-navigator'}
+  {'knubie/vim-kitty-navigator'},
 
   -- Get gitsigns to print git blame in line by default
   require('gitsigns').setup({current_line_blame = true})
