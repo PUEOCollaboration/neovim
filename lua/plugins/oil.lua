@@ -6,7 +6,7 @@ return{
   -- dependencies = { { "echasnovski/mini.icons", opts = {} } },
   dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
   config = function()
-    require('oil').setup({    keymaps = {     ["<Esc>"] = "actions.close"    }   })
+    require('oil').setup({    keymaps = {     ["q"] = "actions.close"    }   })
   end,
   keys = {
     -- { '=', '<cmd>Oil<cr>', mode = 'n', desc = "Open Filesystem" },

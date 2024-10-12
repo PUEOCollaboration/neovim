@@ -8,8 +8,10 @@ return {
 		"tpope/vim-fugitive",
 		config = function ()
 			local map = require("helpers.keys").map
-			-- map("n", "<leader>ga", "<cmd>Git add %<cr>", "Stage the current file")
-			map("n", "<leader>gb", "<cmd>Git blame<cr>", "Show the blame")
+
+      -- once in Fugitive, press - to (un)stage and = to show diff
+			map("n", "<leader>gi", "<cmd>0G<cr>", "Open Git Fugitive")
+			map("n", "<leader>cm", "<cmd>Gwrite<cr>", "Open Git Fugitive to Commit")
 		end
 	}
 }
