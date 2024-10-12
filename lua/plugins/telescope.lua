@@ -24,22 +24,24 @@ return {
 			pcall(require("telescope").load_extension, "fzf")
 
 			local map = require("helpers.keys").map
-			map("n", "<leader>fr", require("telescope.builtin").oldfiles, "Recently opened")
-			map("n", "<leader><space>", require("telescope.builtin").buffers, "Open buffers")
+
+			map("n", "<leader>ff", require("telescope.builtin").find_files, "Find File")
+			map("n", "<leader>gw", require("telescope.builtin").grep_string, "Grep Cursor Word")
+			map("n", "<leader>fg", require("telescope.builtin").live_grep, "Live Grep (all files)")
+			map("n", "<leader>sd", require("telescope.builtin").diagnostics, "Diagnostics")
+
+			map("n", "<leader>fr", require("telescope.builtin").oldfiles, "Find Recently Opened File")
+			map("n", "<leader>fb", require("telescope.builtin").buffers, "Find Buffer")
 			map("n", "<leader>/", function()
 				-- You can pass additional configuration to telescope to change theme, layout, etc.
 				require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 					winblend = 10,
 					previewer = false,
 				}))
-			end, "Search in current buffer")
+			end, "Search for string in current buffer")
 
-			map("n", "<leader>sf", require("telescope.builtin").find_files, "Files")
+      --no sure how to use, yet
 			map("n", "<leader>sh", require("telescope.builtin").help_tags, "Help")
-			map("n", "<leader>sw", require("telescope.builtin").grep_string, "Current word")
-			map("n", "<leader>sg", require("telescope.builtin").live_grep, "Grep")
-			map("n", "<leader>sd", require("telescope.builtin").diagnostics, "Diagnostics")
-
 			map("n", "<C-p>", require("telescope.builtin").keymaps, "Search keymaps")
 		end,
 	},
