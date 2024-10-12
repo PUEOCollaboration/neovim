@@ -1,7 +1,13 @@
 -- for editing directories as if they are vim buffers
 return{
   'stevearc/oil.nvim',
-  opts = {},
+  opts = {
+    default_file_explorer = true,
+    view_options = {
+      show_hidden = true,
+    }
+  },
+  lazy=false,
   -- Optional dependencies
   -- dependencies = { { "echasnovski/mini.icons", opts = {} } },
   dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons

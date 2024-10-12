@@ -1,3 +1,6 @@
+vim.opt.number = true
+vim.opt.signcolumn = "yes"
+
 -- Handle plugins through lazy.nvim
 require("core.lazy")
 

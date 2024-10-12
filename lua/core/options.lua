@@ -1,10 +1,8 @@
 local opts = {
   cursorline = true,
-  signcolumn = "yes:1",
   colorcolumn = "100",
 
   tabstop = 2,
-  number = true,
 
   -- shifts c/c++ block contents by 2 spaces automatically
   shiftwidth = 2,
