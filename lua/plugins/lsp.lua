@@ -8,7 +8,7 @@ return {
     config = function()
       local lspconfig = require('lspconfig')
       lspconfig.clangd.setup{}
-      lspconfig.neocmake.setup{}
+      lspconfig.cmake.setup{}
     end,
   },
 }
