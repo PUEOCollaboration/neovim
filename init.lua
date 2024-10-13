@@ -1,15 +1,9 @@
-vim.opt.number = true
-vim.opt.signcolumn = "yes"
-vim.opt.cursorline = true
-vim.opt.colorcolumn = "100"
--- I don't want to lazy load these options, and can't figure out where else to put them...
+-- options
+require("core.options")
 
-
--- Handle plugins through lazy.nvim
+-- plugins handled by Lazy
 require("core.lazy")
 
--- General Neovim keymaps
+-- (rather standard) curtom keymaps
 require("core.keymaps")
 
--- Other options
-require("core.options")

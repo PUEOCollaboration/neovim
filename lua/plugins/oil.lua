@@ -1,4 +1,11 @@
--- for editing directories as if they are vim buffers
+-- For editing directories as if they are vim buffers
+--
+-- keymaps: 
+--  "-": launch a buffer, which displays current buffers parent directory
+--       (you will be in normal mode, edit the buffer as if it's a normal vim buffer to change
+--        file names, etc.)
+--  "q": close the buffer 
+
 return{
   'stevearc/oil.nvim',
   opts = {
@@ -7,15 +14,19 @@ return{
       show_hidden = true,
     }
   },
-  lazy=false,
-  -- Optional dependencies
-  -- dependencies = { { "echasnovski/mini.icons", opts = {} } },
-  dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+
   config = function()
-    require('oil').setup({    keymaps = {     ["q"] = "actions.close"    }   })
+    require('oil').setup({
+      keymaps = {
+        ["q"] = "actions.close",
+        ["<Esc>"] = "actions.close"
+      } 
+    })
   end,
+
   keys = {
-    -- { '=', '<cmd>Oil<cr>', mode = 'n', desc = "Open Filesystem" },
     { '-', '<cmd>Oil --float<cr>', mode = 'n', desc = "Open Floating Filesystem" },
   }
 }
