@@ -27,7 +27,7 @@ You can stage/unstage a change with `-` (minus sign).
 (Try `=` yourself and see what happens!)
 
 To commit the staged changes, press the leader key, then `c`, and `m`.
-Once again a buffer with pop up for you to edit the commit message.
+Once again a buffer will pop up for you to edit the commit message.
 Save and quit with the usual `:wq`.
 
 ![Git commit demo](git_commit_demo.png)
@@ -40,7 +40,7 @@ you can exit the Fugitive buffer with `gq`.
 You can also view the git log through the command (still inside Neovim)
 ```:Git log```
 ![Git log demo](git_log_demo.png)
-\note: 
+\note 
 capital G in the command `:Git log`!
 
 
@@ -70,13 +70,13 @@ Alternatively, you can simply highlight the text and use the mouse (right click 
 For more information, see @ref osc52intro
 
 ## File Explorer: Oil
-With [Oil](@ref oilintro), one can dit the directory (add, duplicate, delete,
+With [Oil](@ref oilintro), one can edit the directory (add, duplicate, delete,
 move files) as if the file tree is simply a vim buffer!
 
 ![Alt text: oil demo](oil_demo.png)
 
-When you make changes and save with `:w`, a prompt will pop up to ask you to save the changes.
-You can exit this buffer with `<esc>` or `gq`.
+When you make changes and save with `:w`, a prompt will pop up to ask you to save/discard the changes.
+You can exit the Oil buffer with `<esc>` or `gq`.
 
 
 ## Jump Around: Flash and Treesitter
