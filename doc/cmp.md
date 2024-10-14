@@ -1,3 +1,5 @@
-# Completion {#cmpintro}
+# Word Completion {#cmpintro}
 
-hello
+\warning
+**to be added**
+
