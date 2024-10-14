@@ -21,7 +21,6 @@ return{
   config = function()
     require('oil').setup({
       keymaps = {
-        ["q"] = "actions.close",
         ["<Esc>"] = "actions.close"
       } 
     })

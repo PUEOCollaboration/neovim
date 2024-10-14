@@ -1,3 +1,7 @@
+--- 
+-- @file options.lua
+-- @brief some common options + osc-52 as clipboard provider
+
 local opts = {
   
   -- shifts c/c++ block contents by 2 spaces automatically

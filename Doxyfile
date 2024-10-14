@@ -5,17 +5,20 @@ OUTPUT_DIRECTORY       = "./doc"
 
 GENERATE_LATEX         = NO
 
-INPUT                  = . doc
+INPUT                  = doc lua
 
 RECURSIVE              = YES
 
 EXTRACT_ALL            = YES
 
-USE_MDFILE_AS_MAINPAGE = README.md
+USE_MDFILE_AS_MAINPAGE = doc/main.md
+
+IMAGE_PATH             = doc/img
 
 MARKDOWN_SUPPORT       = YES
 
-FILE_PATTERNS          = *.md
+FILE_PATTERNS          = *.md *.lua
+
 
 
 #--------------------------------------------
