@@ -1,27 +1,33 @@
-If you have use Vim before, I hope you will love this Neovim experience.
+If you've used Vim before, I hope you will love this Neovim experience.
 
 # Introduction
 
 [TOC]
 ## LSP and code completion
 
-Since we mainly use C++, our Neovim has been configured to use `clangd` as its C++ 
-[LSP](#lspintro) to help you identify errors as you edit the files.
+Since we mainly use C++, our Neovim has been configured to use `clangd` as its
+C++ [LSP](#lspintro) to help you identify errors as you edit the files.
 
 Here's an example:
 ![Alt text: lsp error demo](lsp_error_demo.png)
 
 
 LSP combined with the [completion plugin](@ref cmpintro) can help you
-automatically complete words as well. Another LSP is `cmake` for editing
-`CMakeLists.txt`; a python LSP will be added in the future.
-
-Here's an example of LSP and completing a CMake variable.
+automatically complete words as well. Here's an example:
 ![Alt text: word completion demo](lsp_cmp_demo.png)
 
 
-
 ## Git commands with Fugitive
+
+In Normal mode, press `spacebar` (this is the <Leader> key), followed by `g`, and then `i`,
+A [Fugitive](@ref fugitiveintro) buffer will show up:
+![Alt text: Fugitive Git Demo](git_demo.png)
+You can stage/unstage a change with `-` (minus sign).
+you can exit this temporary buffer with `gq`.
+
+To commit the staged changes, press the leader key, then `c`, and `m`.
+Once again a buffer with pop up for you to edit the commit message.
+Save and quit with the usual `:wq`.
 
 ## Telescope
 
