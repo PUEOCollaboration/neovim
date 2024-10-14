@@ -1,0 +1,32 @@
+name: Docs
+on:
+  push:
+    branches: 
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  BuildDocs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # this runs doxygen, latest version
+    - name: Doxygen Action
+      uses: mattnotmitt/doxygen-action@master
+      with:
+        doxyfile-path: "./Doxyfile"
+        working-directory: "."
+
+    # this deploys the html files to the gh-pages branch
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./doc/html
+        #
+# Our repo is set up so that when gh-pages is updated,
+# an Action is triggered (not this one, it is another workflow called pages-build-deployment)
+# to deploy whatever content that's in gh-pages to our domain (in this case pueo.space/pueoBuilder)

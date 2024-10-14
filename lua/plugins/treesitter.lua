@@ -1,4 +1,4 @@
--- Highlight, edit, and navigate code
+-- code highlight even when there's no LSP + jumping around based on tree structure (if, af, ic, ac, etc.)
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -13,8 +13,16 @@ return {
 				-- Add languages to be installed here that you want installed for treesitter
 				ensure_installed = {"cpp", "lua", "python", "cmake" },
 
+        -- install a parser based on grammar of the opened file
+        auto_install = true,
+
 				highlight = { enable = true },
 				indent = { enable = true, disable = { "python" } },
+
+        -- Using Treesitter parsers to start a (visual mode) selection;
+        -- This is initialized by pressing control and space;
+        -- press again, and you select more ("incremental").
+        -- Try the other two yourself!
 				incremental_selection = {
 					enable = true,
 					keymaps = {
@@ -24,6 +32,11 @@ return {
 						node_decremental = "<c-backspace>",
 					},
 				},
+
+        -- Now that you have initialized the visual mode selection 
+        -- you can move the cursor around as usual of course, and
+        -- below are some helper keys, the logic is the same as "yiw <-> yank inner word"
+        -- and "yaw <-> yank around the word"
 				textobjects = {
 					select = {
 						enable = true,

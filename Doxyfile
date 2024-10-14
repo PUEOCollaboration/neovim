@@ -1,0 +1,48 @@
+# Doxyfile 1.10.0
+PROJECT_NAME           = "PUEO Neovim Config"
+
+OUTPUT_DIRECTORY       = "./doc"
+
+GENERATE_LATEX         = NO
+
+INPUT                  = . doc
+
+RECURSIVE              = YES
+
+EXTRACT_ALL            = YES
+
+USE_MDFILE_AS_MAINPAGE = README.md
+
+MARKDOWN_SUPPORT       = YES
+
+FILE_PATTERNS          = *.md
+
+
+#--------------------------------------------
+#   Doxygen-awesome: make things pretty
+#--------------------------------------------
+
+# This deals with the github icon on the corner
+# I changed it so that the icon is on the lower-left and edited the github url
+HTML_HEADER            = doc/doxygen-awesome/header.html
+
+# I don't want a fixed sidebar, so not using the last three.
+# I did not modify any of the doxygen-awesome* files
+HTML_EXTRA_STYLESHEET  = doc/doxygen-awesome/doxygen-awesome.css \
+                         doc/doxygen-awesome/doxygen-custom/custom.css \
+                         # doc/doxygen-awesome/doxygen-awesome-sidebar-only.css \
+                         # doc/doxygen-awesome/doxygen-awesome-sidebar-only-darkmode-toggle.css \
+                         # doc/doxygen-awesome/doxygen-custom/custom-alternative.css
+
+# I think this has to do with the interactive icons?
+HTML_EXTRA_FILES       = doc/doxygen-awesome/doxygen-awesome-darkmode-toggle.js \
+                         doc/doxygen-awesome/doxygen-awesome-fragment-copy-button.js \
+                         doc/doxygen-awesome/doxygen-awesome-paragraph-link.js \
+                         doc/doxygen-awesome/doxygen-custom/toggle-alternative-theme.js \
+                         doc/doxygen-awesome/doxygen-awesome-interactive-toc.js \
+                         doc/doxygen-awesome/doxygen-awesome-tabs.js
+
+GENERATE_TREEVIEW      = YES #required! (per its documentation)
+DISABLE_INDEX          = NO
+FULL_SIDEBAR           = YES
+HTML_COLORSTYLE        = LIGHT # required with Doxygen >= 1.9.5

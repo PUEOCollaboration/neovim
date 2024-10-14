@@ -14,6 +14,7 @@ return{
       show_hidden = true,
     }
   },
+  lazy = false, -- in order for Oil to be your default file explorer, you cannot lazy load it
 
   dependencies = { "nvim-tree/nvim-web-devicons" },
 
