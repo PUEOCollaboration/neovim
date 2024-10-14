@@ -172,7 +172,7 @@ Git commands with Fugitive</h2>
 <div class="caption">
 Git stage demo</div></div>
     <p>You can stage/unstage a change with <code>-</code> (minus sign). (Try <code>=</code> yourself and see what happens!)</p>
-<p>To commit the staged changes, press the leader key, then <code>c</code>, and <code>m</code>. Once again a buffer with pop up for you to edit the commit message. Save and quit with the usual <code>:wq</code>.</p>
+<p>To commit the staged changes, press the leader key, then <code>c</code>, and <code>m</code>. Once again a buffer will pop up for you to edit the commit message. Save and quit with the usual <code>:wq</code>.</p>
 <div class="image">
 <img src="git_commit_demo.png" alt=""/>
 <div class="caption">
@@ -181,7 +181,7 @@ Git commit demo</div></div>
 <p>you can exit the Fugitive buffer with <code>gq</code>.</p>
 <p>You can also view the git log through the command (still inside Neovim) </p><div class="fragment"><div class="line">:Git log</div>
 </div><!-- fragment --><p> <img src="git_log_demo.png" alt="" class="inline" title="Git log demo"/>    </p>
-<dl class="section note"><dt>Note</dt><dd>: capital G in the command <code>:Git log</code>!</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>capital G in the command <code>:Git log</code>!</dd></dl>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Copying to the System Clipboard</h2>
 <p>If you're inside a Docker container and open up a text file with neovim, and you wish to copy some texts to paste elsewhere (say, Safari, or Slack), here's how you can do it.</p>
@@ -196,12 +196,12 @@ osc52 yank demo</div></div>
 <p>Alternatively, you can simply highlight the text and use the mouse (right click and select copy). For more information, see <a class="el" href="osc52intro.html">Clipboard Provider: OSC52</a></p>
 <h2><a class="anchor" id="autotoc_md4"></a>
 File Explorer: Oil</h2>
-<p>With <a class="el" href="oilintro.html">Oil</a>, one can dit the directory (add, duplicate, delete, move files) as if the file tree is simply a vim buffer!</p>
+<p>With <a class="el" href="oilintro.html">Oil</a>, one can edit the directory (add, duplicate, delete, move files) as if the file tree is simply a vim buffer!</p>
 <div class="image">
 <img src="oil_demo.png" alt=""/>
 <div class="caption">
 Alt text: oil demo</div></div>
-    <p>When you make changes and save with <code>:w</code>, a prompt will pop up to ask you to save the changes. You can exit this buffer with <code>&lt;esc&gt;</code> or <code>gq</code>.</p>
+    <p>When you make changes and save with <code>:w</code>, a prompt will pop up to ask you to save/discard the changes. You can exit the Oil buffer with <code>&lt;esc&gt;</code> or <code>gq</code>.</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Jump Around: Flash and Treesitter</h2>
 <p>Jump around fast with <a class="el" href="flashintro.html">Flash</a>; and even faster with <a class="el" href="treesitterintro.html">Treesitter</a>!</p>
