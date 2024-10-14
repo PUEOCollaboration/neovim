@@ -75,7 +75,7 @@ move files) as if the file tree is simply a vim buffer!
 ![Alt text: oil demo](oil_demo.png)
 
 When you make changes and save with `:w`, a prompt will pop up to ask you to save the changes.
-You can exit this buffer with `<esc>`
+You can exit this buffer with `<esc>` or `gq`.
 
 
 ## Jump Around: Flash and Treesitter

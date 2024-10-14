@@ -28,6 +28,7 @@ return{
 
   keys = {
     { '-', '<cmd>Oil --float<cr>', mode = 'n', desc = "Open Floating Filesystem" },
+    { 'gq', '<cmd>close<cr>', mode = 'n', desc = "same as actions.close" },
   }
 }
 
