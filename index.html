@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Doxygen Awesome" />
 <meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
 <!-- END twitter metadata -->
-<title>PUEO Neovim Config: Neovim configuration</title>
+<title>PUEO Neovim Config: PUEO Neovim Config</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -126,11 +126,71 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Neovim configuration </div></div>
+  <div class="headertitle"><div class="title">PUEO Neovim Config </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a></p>
-<p>A lightweight Neovim config to be used inside PUEO Docker containers. Modified from the <a href="https://github.com/frans-johansson/lazy-nvim-starter">lazy-nvim-starter</a>. </p>
+<div class="toc"><h3>Table of Contents</h3>
+<ul>
+  <li class="level1">
+    <a href="#autotoc_md0">Introduction</a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md1">LSP and code completion</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md2">Git commands with Fugitive</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md3">Telescope</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md4">Other plugins and features that makes the world a better place</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md5">Copying to the System Clipboard</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md6">File Explorer: Oil</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md7">Jump Around: Flash</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md_doc_2main"></a> If you have use Vim before, I hope you will love this Neovim experience.</p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+Introduction</h1>
+<h2><a class="anchor" id="autotoc_md1"></a>
+LSP and code completion</h2>
+<p>Since we mainly use C++, our Neovim has been configured to use <code>clangd</code> as its C++ <a class="el" href="lspintro.html">LSP</a> to help you identify errors as you edit the files.</p>
+<p>Here's an example: <img src="lsp_error_demo.png" alt="" class="inline" title="Alt text: lsp error demo"/>    </p>
+<p>LSP combined with the <a class="el" href="cmpintro.html">completion plugin</a> can help you automatically complete words as well. Another LSP is <code>cmake</code> for editing <code>CMakeLists.txt</code>; a python LSP will be added in the future.</p>
+<p>Here's an example of LSP and completing a CMake variable. <img src="lsp_cmp_demo.png" alt="" class="inline" title="Alt text: word completion demo"/>    </p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Git commands with Fugitive</h2>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Telescope</h2>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Other plugins and features that makes the world a better place</h2>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Copying to the System Clipboard</h3>
+<p>If you're inside a Docker container and opened up a text file with neovim, and you wish to copy some texts to paste elsewhere (say, Safari, or Slack), here's an example:</p>
+<ul>
+<li>step 1. highlight some the text in visual mode</li>
+<li>step 2. press " (double quote), then <code>+</code> to select the register, and then <code>y</code> to yank.</li>
+<li>step 2. or, simply use the mouse, right click and select copy.</li>
+</ul>
+<p>For more information, see <a class="el" href="osc52intro.html">Clipboard Provider: OSC52</a></p>
+<h3><a class="anchor" id="autotoc_md6"></a>
+File Explorer: Oil</h3>
+<p>Edit the directory (add, duplicate, delete, move) files as if it is simply a vim buffer with <a class="el" href="oilintro.html">Oil</a>!</p>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Jump Around: Flash</h3>
+<p>Jump around faster with <a class="el" href="flashintro.html">Flash</a>; and even faster with <a class="el" href="treesitterintro.html">Treesitter</a>! </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

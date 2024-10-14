@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lsp_2emd_0',['lsp.md',['../lsp_8md.html',1,'']]],
-  ['lualine_2emd_1',['lualine.md',['../lualine_8md.html',1,'']]]
+  ['git_2elua_0',['git.lua',['../git_8lua.html',1,'']]],
+  ['git_2emd_1',['git.md',['../git_8md.html',1,'']]]
 ];

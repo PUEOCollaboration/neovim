@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['flash_0',['flash',['../md_doc_2flash.html',1,'']]],
-  ['flash_2emd_1',['flash.md',['../flash_8md.html',1,'']]]
+  ['better_20place_0',['Other plugins and features that makes the world a better place',['../index.html#autotoc_md4',1,'']]],
+  ['buffers_2elua_1',['buffers.lua',['../buffers_8lua.html',1,'']]]
 ];

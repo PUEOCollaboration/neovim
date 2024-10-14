@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['telescope_0',['telescope',['../md_doc_2telescope.html',1,'']]],
-  ['themes_1',['themes',['../md_doc_2themes.html',1,'']]],
-  ['treesitter_2',['treesitter',['../md_doc_2treesitter.html',1,'']]]
+  ['protocol_0',['Language Server Protocol',['../lspintro.html',1,'']]],
+  ['provider_3a_20osc52_1',['Clipboard Provider: OSC52',['../osc52intro.html',1,'']]],
+  ['pueo_20neovim_20config_2',['PUEO Neovim Config',['../index.html',1,'']]]
 ];
