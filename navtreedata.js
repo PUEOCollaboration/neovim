@@ -25,28 +25,24 @@
 var NAVTREE =
 [
   [ "PUEO Neovim Config", "index.html", [
-    [ "Introduction", "index.html#autotoc_md0", [
+    [ "Demo", "index.html#autotoc_md0", [
       [ "LSP and code completion", "index.html#autotoc_md1", null ],
       [ "Git commands with Fugitive", "index.html#autotoc_md2", null ],
-      [ "Telescope", "index.html#autotoc_md3", null ],
-      [ "Other plugins and features that makes the world a better place", "index.html#autotoc_md4", [
-        [ "Copying to the System Clipboard", "index.html#autotoc_md5", null ],
-        [ "File Explorer: Oil", "index.html#autotoc_md6", null ],
-        [ "Jump Around: Flash", "index.html#autotoc_md7", null ]
-      ] ]
+      [ "Copying to the System Clipboard", "index.html#autotoc_md3", null ],
+      [ "File Explorer: Oil", "index.html#autotoc_md4", null ],
+      [ "Jump Around: Flash and Treesitter", "index.html#autotoc_md5", null ],
+      [ "Telescope", "index.html#autotoc_md6", null ]
     ] ],
-    [ "Completion", "cmpintro.html", null ],
+    [ "Word Completion", "cmpintro.html", null ],
     [ "flash", "flashintro.html", null ],
     [ "Git with Fugitive", "fugitiveintro.html", null ],
     [ "Language Server Protocol", "lspintro.html", null ],
     [ "lualine", "md_doc_2lualine.html", null ],
-    [ "nvim-cokeline", "md_doc_2nvim-cokeline.html", null ],
     [ "Oil", "oilintro.html", null ],
     [ "Clipboard Provider: OSC52", "osc52intro.html", [
-      [ "Example usage", "osc52intro.html#autotoc_md8", null ]
+      [ "Example usage", "osc52intro.html#autotoc_md7", null ]
     ] ],
-    [ "telescope", "md_doc_2telescope.html", null ],
-    [ "themes", "md_doc_2themes.html", null ],
+    [ "Telescope", "md_doc_2telescope.html", null ],
     [ "Treesitter", "treesitterintro.html", null ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ]

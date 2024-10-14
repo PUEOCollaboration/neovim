@@ -132,7 +132,7 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <div class="toc"><h3>Table of Contents</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md0">Introduction</a>
+    <a href="#autotoc_md0">Demo</a>
     <ul>
       <li class="level2">
         <a href="#autotoc_md1">LSP and code completion</a>
@@ -141,21 +141,16 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
         <a href="#autotoc_md2">Git commands with Fugitive</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md3">Telescope</a>
+        <a href="#autotoc_md3">Copying to the System Clipboard</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md4">Other plugins and features that makes the world a better place</a>
-        <ul>
-          <li class="level3">
-            <a href="#autotoc_md5">Copying to the System Clipboard</a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md6">File Explorer: Oil</a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md7">Jump Around: Flash</a>
-          </li>
-        </ul>
+        <a href="#autotoc_md4">File Explorer: Oil</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md5">Jump Around: Flash and Treesitter</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md6">Telescope</a>
       </li>
     </ul>
   </li>
@@ -163,7 +158,7 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div>
 <div class="textblock"><p><a class="anchor" id="md_doc_2main"></a> If you've used Vim before, I hope you will love this Neovim experience.</p>
 <h1><a class="anchor" id="autotoc_md0"></a>
-Introduction</h1>
+Demo</h1>
 <h2><a class="anchor" id="autotoc_md1"></a>
 LSP and code completion</h2>
 <p>Since we mainly use C++, our Neovim has been configured to use <code>clangd</code> as its C++ <a class="el" href="lspintro.html">LSP</a> to help you identify errors as you edit the files.</p>
@@ -175,30 +170,44 @@ Git commands with Fugitive</h2>
 <div class="image">
 <img src="git_stage_demo.png" alt=""/>
 <div class="caption">
-Alt text: Fugitive Git Demo</div></div>
+Git stage demo</div></div>
     <p>You can stage/unstage a change with <code>-</code> (minus sign).</p>
-<p>To commit the staged changes, press the leader key, then <code>c</code>, and <code>m</code>. Once again a buffer with pop up for you to edit the commit message. Save and quit with the usual <code>:wq</code>. <img src="git_commit_demo.png" alt="" class="inline" title="Alt text: Fugitive Git Demo 2"/>    </p>
-<p>You can push the commit by pressing <code>s</code>. <img src="git_push_demo.png" alt="" class="inline" title="Alt text: Fugitive Git Demo 2"/>    </p>
-<p>you can exit this temporary buffer with <code>gq</code>.</p>
+<p>To commit the staged changes, press the leader key, then <code>c</code>, and <code>m</code>. Once again a buffer with pop up for you to edit the commit message. Save and quit with the usual <code>:wq</code>.</p>
+<div class="image">
+<img src="git_commit_demo.png" alt=""/>
+<div class="caption">
+Git commit demo</div></div>
+    <p>You can push the commit by pressing <code>s</code> (The commit under your cursor will be pushed) <img src="git_push_demo.png" alt="" class="inline" title="Git push demo"/>    </p>
+<p>you can exit the Fugitive buffer with <code>gq</code>.</p>
+<p>You can also view the git log through the command (still inside Neovim) </p><div class="fragment"><div class="line">:Git log</div>
+</div><!-- fragment --><p> <img src="git_log_demo.png" alt="" class="inline" title="Git log demo"/>    </p>
+<dl class="section note"><dt>Note</dt><dd>: capital G in the command <code>:Git log</code>!</dd></dl>
 <h2><a class="anchor" id="autotoc_md3"></a>
-Telescope</h2>
+Copying to the System Clipboard</h2>
+<p>If you're inside a Docker container and open up a text file with neovim, and you wish to copy some texts to paste elsewhere (say, Safari, or Slack), here's how you can do it.</p>
+<p>With cursor on line 69, We could yank line 69 and one line above with</p>
+<div class="image">
+<img src="yank_demo.png" alt=""/>
+<div class="caption">
+osc52 yank demo</div></div>
+    <p>which yanks </p><div class="fragment"><div class="line"># lsd for prettier ls</div>
+<div class="line">RUN echo alias ls=lsd &gt;&gt; /root/.bashrc</div>
+</div><!-- fragment --><p><b>Explanation</b>: The "+" register has been configured to be used with osc52. In the above, we selected the register with " (shift and ') and <code>+</code> (shift and =), and start yanking with <code>y</code> as we normally do in Vim.</p>
+<p>Alternatively, you can simply highlight the text and use the mouse (right click and select copy). For more information, see <a class="el" href="osc52intro.html">Clipboard Provider: OSC52</a></p>
 <h2><a class="anchor" id="autotoc_md4"></a>
-Other plugins and features that makes the world a better place</h2>
-<h3><a class="anchor" id="autotoc_md5"></a>
-Copying to the System Clipboard</h3>
-<p>If you're inside a Docker container and opened up a text file with neovim, and you wish to copy some texts to paste elsewhere (say, Safari, or Slack), here's an example:</p>
-<ul>
-<li>step 1. highlight some the text in visual mode</li>
-<li>step 2. press " (double quote), then <code>+</code> to select the register, and then <code>y</code> to yank.</li>
-<li>step 2. or, simply use the mouse, right click and select copy.</li>
-</ul>
-<p>For more information, see <a class="el" href="osc52intro.html">Clipboard Provider: OSC52</a></p>
-<h3><a class="anchor" id="autotoc_md6"></a>
-File Explorer: Oil</h3>
-<p>Edit the directory (add, duplicate, delete, move) files as if it is simply a vim buffer with <a class="el" href="oilintro.html">Oil</a>!</p>
-<h3><a class="anchor" id="autotoc_md7"></a>
-Jump Around: Flash</h3>
-<p>Jump around faster with <a class="el" href="flashintro.html">Flash</a>; and even faster with <a class="el" href="treesitterintro.html">Treesitter</a>! </p>
+File Explorer: Oil</h2>
+<p>With <a class="el" href="oilintro.html">Oil</a>, one can dit the directory (add, duplicate, delete, move files) as if the file tree is simply a vim buffer!</p>
+<div class="image">
+<img src="oil_demo.png" alt=""/>
+<div class="caption">
+Alt text: oil demo</div></div>
+    <p>When you make changes and save with <code>:w</code>, a prompt will pop up to ask you to save the changes. You can exit this buffer with <code>&lt;esc&gt;</code></p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Jump Around: Flash and Treesitter</h2>
+<p>Jump around fast with <a class="el" href="flashintro.html">Flash</a>; and even faster with <a class="el" href="treesitterintro.html">Treesitter</a>!</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Telescope</h2>
+<p>find files, buffers, search texts with live grep, and more! </p><dl class="section warning"><dt>Warning</dt><dd><b>to be added</b> </dd></dl>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
