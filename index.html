@@ -161,17 +161,19 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md_doc_2main"></a> If you have use Vim before, I hope you will love this Neovim experience.</p>
+<div class="textblock"><p><a class="anchor" id="md_doc_2main"></a> If you've used Vim before, I hope you will love this Neovim experience.</p>
 <h1><a class="anchor" id="autotoc_md0"></a>
 Introduction</h1>
 <h2><a class="anchor" id="autotoc_md1"></a>
 LSP and code completion</h2>
 <p>Since we mainly use C++, our Neovim has been configured to use <code>clangd</code> as its C++ <a class="el" href="lspintro.html">LSP</a> to help you identify errors as you edit the files.</p>
 <p>Here's an example: <img src="lsp_error_demo.png" alt="" class="inline" title="Alt text: lsp error demo"/>    </p>
-<p>LSP combined with the <a class="el" href="cmpintro.html">completion plugin</a> can help you automatically complete words as well. Another LSP is <code>cmake</code> for editing <code>CMakeLists.txt</code>; a python LSP will be added in the future.</p>
-<p>Here's an example of LSP and completing a CMake variable. <img src="lsp_cmp_demo.png" alt="" class="inline" title="Alt text: word completion demo"/>    </p>
+<p>LSP combined with the <a class="el" href="cmpintro.html">completion plugin</a> can help you automatically complete words as well. Here's an example: <img src="lsp_cmp_demo.png" alt="" class="inline" title="Alt text: word completion demo"/>    </p>
 <h2><a class="anchor" id="autotoc_md2"></a>
 Git commands with Fugitive</h2>
+<p>In Normal mode, press <code>spacebar</code> (this is the &lt;Leader&gt; key), followed by <code>g</code>, and then <code>i</code>, A <a class="el" href="fugitiveintro.html">Fugitive</a> buffer will show up: <img src="git_demo.png" alt="" class="inline" title="Alt text: Fugitive Git Demo"/>    </p>
+<p>You can stage/unstage a change with <code>-</code> (minus sign). you can exit this temporary buffer with <code>gq</code>.</p>
+<p>To commit the staged changes, press the leader key, then <code>c</code>, and <code>m</code>. Once again a buffer with pop up for you to edit the commit message. Save and quit with the usual <code>:wq</code>.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Telescope</h2>
 <h2><a class="anchor" id="autotoc_md4"></a>

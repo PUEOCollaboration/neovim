@@ -6,5 +6,5 @@ var searchData=
   ['flash_3',['flash',['../flashintro.html',1,'']]],
   ['flash_2elua_4',['flash.lua',['../flash_8lua.html',1,'']]],
   ['flash_2emd_5',['flash.md',['../flash_8md.html',1,'']]],
-  ['fugitive_6',['Git commands with Fugitive',['../index.html#autotoc_md2',1,'']]]
+  ['fugitive_6',['Fugitive',['../index.html#autotoc_md2',1,'Git commands with Fugitive'],['../fugitiveintro.html',1,'Git with Fugitive']]]
 ];

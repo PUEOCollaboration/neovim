@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['git_0',['git',['../md_doc_2git.html',1,'']]]
+  ['git_20with_20fugitive_0',['Git with Fugitive',['../fugitiveintro.html',1,'']]]
 ];

@@ -37,7 +37,7 @@ var NAVTREE =
     ] ],
     [ "Completion", "cmpintro.html", null ],
     [ "flash", "flashintro.html", null ],
-    [ "git", "md_doc_2git.html", null ],
+    [ "Git with Fugitive", "fugitiveintro.html", null ],
     [ "Language Server Protocol", "lspintro.html", null ],
     [ "lualine", "md_doc_2lualine.html", null ],
     [ "nvim-cokeline", "md_doc_2nvim-cokeline.html", null ],
