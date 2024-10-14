@@ -5,7 +5,5 @@ var searchData=
   ['lsp_20and_20code_20completion_2',['LSP and code completion',['../index.html#autotoc_md1',1,'']]],
   ['lsp_2elua_3',['lsp.lua',['../lsp_8lua.html',1,'']]],
   ['lsp_2emd_4',['lsp.md',['../lsp_8md.html',1,'']]],
-  ['lualine_5',['lualine',['../md_doc_2lualine.html',1,'']]],
-  ['lualine_2elua_6',['lualine.lua',['../lualine_8lua.html',1,'']]],
-  ['lualine_2emd_7',['lualine.md',['../lualine_8md.html',1,'']]]
+  ['lualine_2elua_5',['lualine.lua',['../lualine_8lua.html',1,'']]]
 ];

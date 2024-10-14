@@ -37,7 +37,6 @@ var NAVTREE =
     [ "flash", "flashintro.html", null ],
     [ "Git with Fugitive", "fugitiveintro.html", null ],
     [ "Language Server Protocol", "lspintro.html", null ],
-    [ "lualine", "md_doc_2lualine.html", null ],
     [ "Oil", "oilintro.html", null ],
     [ "Clipboard Provider: OSC52", "osc52intro.html", [
       [ "Example usage", "osc52intro.html#autotoc_md7", null ]
