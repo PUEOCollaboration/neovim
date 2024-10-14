@@ -24,6 +24,7 @@ the [Fugitive](@ref fugitiveintro) buffer will show up:
 ![Git stage demo](git_stage_demo.png)
 
 You can stage/unstage a change with `-` (minus sign).
+(Try `=` yourself and see what happens!)
 
 To commit the staged changes, press the leader key, then `c`, and `m`.
 Once again a buffer with pop up for you to edit the commit message.
