@@ -19,15 +19,21 @@ automatically complete words as well. Here's an example:
 
 ## Git commands with Fugitive
 
-In Normal mode, press `spacebar` (this is the <Leader> key), followed by `g`, and then `i`,
-A [Fugitive](@ref fugitiveintro) buffer will show up:
-![Alt text: Fugitive Git Demo](git_demo.png)
+In Normal mode, press `spacebar` (this is our chosen "leader key"), followed by `g`, and then `i`,
+the [Fugitive](@ref fugitiveintro) buffer will show up:
+
+![Alt text: Fugitive Git Demo](git_stage_demo.png)
+
 You can stage/unstage a change with `-` (minus sign).
-you can exit this temporary buffer with `gq`.
 
 To commit the staged changes, press the leader key, then `c`, and `m`.
 Once again a buffer with pop up for you to edit the commit message.
 Save and quit with the usual `:wq`.
+![Alt text: Fugitive Git Demo 2](git_commit_demo.png)
+
+You can push the commit by pressing `s`.
+![Alt text: Fugitive Git Demo 2](git_push_demo.png)
+you can exit this temporary buffer with `gq`.
 
 ## Telescope
 
