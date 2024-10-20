@@ -13,9 +13,6 @@ return {
 				-- Add languages to be installed here that you want installed for treesitter
 				ensure_installed = {"cpp", "lua", "python", "cmake" },
 
-        -- install a parser based on grammar of the opened file
-        auto_install = true,
-
 				highlight = { enable = true },
 				indent = { enable = true, disable = { "python" } },
 
@@ -73,6 +70,10 @@ return {
 					},
 				},
 			})
+      vim.wo.foldmethod = 'expr'
+      vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+      vim.wo.foldlevel = 99
+      vim.cmd([[set nofoldenable]]) -- disable folding by default
 		end,
 	},
 }
