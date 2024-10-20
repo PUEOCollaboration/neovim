@@ -9,6 +9,7 @@ return {
       local lspconfig = require('lspconfig')
       lspconfig.clangd.setup{}
       lspconfig.cmake.setup{}
+      lspconfig.pylsp.setup{}
     end,
   },
 }
