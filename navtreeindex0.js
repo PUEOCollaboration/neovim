@@ -36,8 +36,9 @@ var NAVTREEINDEX0 =
 "osc52intro.html":[6],
 "osc52intro.html#autotoc_md7":[6,0],
 "pages.html":[],
-"telescope_8lua.html":[9,0,1,2,7],
-"themes_8lua.html":[9,0,1,2,8],
-"treesitter_8lua.html":[9,0,1,2,9],
+"rainbow-csv_8lua.html":[9,0,1,2,7],
+"telescope_8lua.html":[9,0,1,2,8],
+"themes_8lua.html":[9,0,1,2,9],
+"treesitter_8lua.html":[9,0,1,2,10],
 "treesitterintro.html":[8]
 };
