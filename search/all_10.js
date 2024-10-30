@@ -7,6 +7,7 @@ var searchData=
   ['themes_2elua_4',['themes.lua',['../themes_8lua.html',1,'']]],
   ['to_20the_20system_20clipboard_5',['Copying to the System Clipboard',['../index.html#autotoc_md3',1,'']]],
   ['treesitter_6',['Treesitter',['../index.html#autotoc_md5',1,'Jump Around: Flash and Treesitter'],['../treesitterintro.html',1,'Treesitter']]],
-  ['treesitter_2elua_7',['treesitter.lua',['../treesitter_8lua.html',1,'']]],
-  ['treesitter_2emd_8',['treesitter.md',['../treesitter_8md.html',1,'']]]
+  ['treesitter_2dcontext_2elua_7',['treesitter-context.lua',['../treesitter-context_8lua.html',1,'']]],
+  ['treesitter_2elua_8',['treesitter.lua',['../treesitter_8lua.html',1,'']]],
+  ['treesitter_2emd_9',['treesitter.md',['../treesitter_8md.html',1,'']]]
 ];
