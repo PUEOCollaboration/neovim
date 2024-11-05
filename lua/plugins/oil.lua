@@ -9,8 +9,7 @@
 --  =: same as -, but not floating
 --  g.: show/hide hidden files
 --
---  ctrl+c: close the Oil buffer (does not work in preview mode)
---  gq: close the Oil buffer (works in preview mode, if anything, you can always :q)
+--  ctrl+c: close the Oil buffer (does not work in preview mode; if anything, you can always :q)
 --
 --  ctrl+s: opens a file to a side split pane.
 --  ctrl+h: opens in a horizontal split; or,
@@ -42,7 +41,7 @@ return{
   keys = {
     { '-', '<cmd>Oil --float<cr>', mode = 'n', desc = "Open Floating Filesystem" },
     -- { '=', '<cmd>Oil <cr>', mode = 'n', desc = "Open Filesystem" },
-    { 'gq', '<cmd>close<cr>', mode = 'n', desc = "Almost the same as actions.close" },
+    -- { 'gq', '<cmd>close<cr>', mode = 'n', desc = "Almost the same as actions.close" },
   }
 }
 
