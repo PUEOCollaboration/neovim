@@ -2,7 +2,18 @@
 return {
 	{
 		"lewis6991/gitsigns.nvim",
-		opts = {},
+		config = function ()
+      require("gitsigns").setup({
+        current_line_blame = true, -- Enable inline git blame
+        current_line_blame_opts = {
+          virt_text = true, -- Show virtual text (ghost text)
+          virt_text_pos = "eol", -- Position: 'eol' | 'overlay' | 'right_align'
+          delay = 100, -- Delay before showing blame (in ms)
+          ignore_whitespace = false, -- Ignore whitespace when checking blame
+        },
+        current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> - <summary>", -- Customize blame text
+      })
+		end
 	},
 	{
 		"tpope/vim-fugitive",
