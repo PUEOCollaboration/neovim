@@ -23,7 +23,7 @@ map("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- Deleting buffers
 local buffers = require("helpers.buffers")
-map("n", "<Leader>x", buffers.delete_this, "Current buffer")
+map("n", "<Leader>x", ":bp|bd #<CR>", "Current buffer") -- closes buffer safely (ie. without closing split panes)
 -- note: these two don't work
 -- map("n", "<Leader>o", buffers.delete_others, "Other buffers")
 -- map("n", "<Leader>d", buffers.delete_all, "All buffers") 
