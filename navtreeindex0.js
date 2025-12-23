@@ -38,7 +38,6 @@ var NAVTREEINDEX0 =
 "rainbow-csv_8lua.html":[9,0,1,2,6],
 "telescope_8lua.html":[9,0,1,2,7],
 "themes_8lua.html":[9,0,1,2,8],
-"treesitter-context_8lua.html":[9,0,1,2,9],
-"treesitter_8lua.html":[9,0,1,2,10],
+"treesitter_8lua.html":[9,0,1,2,9],
 "treesitterintro.html":[8]
 };
