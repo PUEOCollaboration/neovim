@@ -18,9 +18,13 @@ return {
     vim.lsp.enable('clangd'),
     vim.lsp.config("neocmake", {
       init_options = {
+        format = {
+          enable = true
+        },
         lint = {
           enable = false
         },
+        scan_cmake_in_package = true -- default is true
       }
     }),
     vim.lsp.enable('neocmake'),
