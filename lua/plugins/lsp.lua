@@ -2,9 +2,6 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-    },
     vim.lsp.config('pylsp', {
       settings = {
         ['pylsp'] = {
@@ -19,12 +16,12 @@ return {
     }),
     vim.lsp.enable('pylsp'),
     vim.lsp.enable('clangd'),
-    vim.lsp.config('neocmakelsp', {
+    vim.lsp.config("neocmake", {
       init_options = {
-        ['lint'] = {
+        lint = {
           enable = false
         },
-      },
+      }
     }),
     vim.lsp.enable('neocmake'),
 

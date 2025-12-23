@@ -1,6 +1,3 @@
--- Too lazy to deal with the Treesitter breaking change,
--- so here is a copy-and-pasted config from some random reddit reply lmfao
--- https://www.reddit.com/r/neovim/comments/1ppa4ag/comment/nv1geeo/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
 
 return {
     "nvim-treesitter/nvim-treesitter",
@@ -8,21 +5,11 @@ return {
     branch = "main",
     build = ":TSUpdate",
     config = function()
-        -- Collect all available parsers
-        local queries_dir = vim.fn.stdpath("data") .. "/lazy/nvim-treesitter/runtime/queries"
-        local file_types = {}
-        for name, type in vim.fs.dir(queries_dir) do
-            if type == "directory" then
-                table.insert(file_types, name)
-            end
-        end
+        require'nvim-treesitter'.install { 'python', 'cmake', 'cpp' }
 
-        -- Install file type parsers
-        require("nvim-treesitter").install(file_types)
-
-        -- Automatically activate
+        -- treesitter README: https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#highlighting
         vim.api.nvim_create_autocmd("FileType", {
-            pattern = file_types,
+            pattern = {'python', 'cmake', 'cpp'},
             callback = function()
                 -- Highlights
                 vim.treesitter.start()
@@ -33,5 +20,6 @@ return {
                 vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
             end,
         })
+        -- See also: https://www.reddit.com/r/neovim/comments/1ppa4ag/comment/nv1geeo/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
     end,
 }
