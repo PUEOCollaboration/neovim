@@ -1,80 +1,37 @@
--- code highlight even when there's no LSP + jumping around based on tree structure (if, af, ic, ac, etc.)
+-- Too lazy to deal with the Treesitter breaking change,
+-- so here is a copy-and-pasted config from some random reddit reply lmfao
+-- https://www.reddit.com/r/neovim/comments/1ppa4ag/comment/nv1geeo/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+
 return {
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = function()
-			pcall(require("nvim-treesitter.install").update({ with_sync = true }))
-		end,
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter-textobjects",
-		},
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				-- Add languages to be installed here that you want installed for treesitter
-				ensure_installed = {"cpp", "lua", "python", "cmake" },
+    "nvim-treesitter/nvim-treesitter",
+    lazy = false,
+    branch = "main",
+    build = ":TSUpdate",
+    config = function()
+        -- Collect all available parsers
+        local queries_dir = vim.fn.stdpath("data") .. "/lazy/nvim-treesitter/runtime/queries"
+        local file_types = {}
+        for name, type in vim.fs.dir(queries_dir) do
+            if type == "directory" then
+                table.insert(file_types, name)
+            end
+        end
 
-				highlight = { enable = true },
-				indent = { enable = true, disable = { "python" } },
+        -- Install file type parsers
+        require("nvim-treesitter").install(file_types)
 
-        -- Using Treesitter parsers to start a (visual mode) selection;
-        -- This is initialized by pressing control and space;
-        -- press again, and you select more ("incremental").
-        -- Try the other two yourself!
-				incremental_selection = {
-					enable = true,
-					keymaps = {
-						init_selection = "<c-space>",
-						node_incremental = "<c-space>",
-						scope_incremental = "<c-s>",
-						node_decremental = "<c-backspace>",
-					},
-				},
-
-        -- Now that you have initialized the visual mode selection 
-        -- you can move the cursor around as usual of course, and
-        -- below are some helper keys, the logic is the same as "yiw <-> yank inner word"
-        -- and "yaw <-> yank around the word"
-				textobjects = {
-					select = {
-						enable = true,
-						lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-						keymaps = {
-							-- You can use the capture groups defined in textobjects.scm
-							["aa"] = "@parameter.outer",
-							["ia"] = "@parameter.inner",
-							["af"] = "@function.outer",
-							["if"] = "@function.inner",
-							["ac"] = "@class.outer",
-							["ic"] = "@class.inner",
-						},
-					},
-					move = {
-						enable = true,
-						set_jumps = true, -- whether to set jumps in the jumplist
-						goto_next_start = {
-							["]m"] = "@function.outer",
-							["]]"] = "@class.outer",
-						},
-						goto_next_end = {
-							["]M"] = "@function.outer",
-							["]["] = "@class.outer",
-						},
-						goto_previous_start = {
-							["[m"] = "@function.outer",
-							["[["] = "@class.outer",
-						},
-						goto_previous_end = {
-							["[M"] = "@function.outer",
-							["[]"] = "@class.outer",
-						},
-					},
-				},
-			})
-      vim.wo.foldmethod = 'expr'
-      vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-      vim.wo.foldlevel = 99
-      vim.cmd([[set nofoldenable]]) -- disable folding by default
-		end,
-	},
+        -- Automatically activate
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = file_types,
+            callback = function()
+                -- Highlights
+                vim.treesitter.start()
+                -- Folds
+                vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+                vim.wo[0][0].foldmethod = "expr"
+                -- Indentation
+                vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            end,
+        })
+    end,
 }
-
